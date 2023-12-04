@@ -1,0 +1,42 @@
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(231, 7%, 60%);
+  --charcoal-gray: hsl(235, 18%, 26%);
+  --dark-slate-gray: hsl(234, 29%, 20%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}
+
+img {
+  max-height: 100%;
+  display: block;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+
+  overflow-y: auto;
+}
+
+
