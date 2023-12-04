@@ -4,6 +4,7 @@
   --grey: hsl(231, 7%, 60%);
   --charcoal-gray: hsl(235, 18%, 26%);
   --dark-slate-gray: hsl(234, 29%, 20%);
+  --main-font: 'Roboto', sans-serif;
 }
 
 * {
@@ -17,26 +18,161 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--main-font);
   font-size: 1.6rem;
 }
 
 img {
+  width: 100%;
   max-height: 100%;
   display: block;
 }
 
-body {
+.hidden {
+  display: none !important;
+}
+
+main {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 3.5rem 2rem;
+}
+
+h2 {
+  margin-bottom: 3rem;
+
+  font-size: 4.25rem;
+
+  color: var(--dark-slate-gray);
+}
+
+p {
+  margin-bottom: 3rem;
+  line-height: 1.4;
+
+  color: var(--dark-slate-gray);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin-bottom: 4rem;
+
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+li img {
+  width: 2.1rem;
+}
+
+li p {
+  margin-bottom: 0;
+}
+
+.form-with-error {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 2rem;
+}
+
+.form-with-error label {
+  display: flex;
+  justify-content: space-between;
+}
+
+label span {
+  margin-bottom: 1rem;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+input {
+  padding: 1.5rem 2rem;
+
+  font-size: 1.6rem;
+  font-family: var(--main-font);
+
+  border: 0.1rem solid var(--grey);
+  border-radius: 0.5rem;
+  outline: none;
+
+  transition: 100ms all ease;
+}
+
+input::placeholder {
+  color: var(--grey);
+}
+
+input:focus {
+  border-color: var(--dark-slate-gray);
+  color: var(--dark-slate-gray);
+}
+
+button {
+  width: 100%;
+
+  padding: 2rem;
+
+  font-size: 1.6rem;
+  font-family: var(--main-font);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--dark-slate-gray);
+  color: var(--white);
+
+  transition: 300ms all ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #FF3E83 15%, var(--tomato) 100%);
+  box-shadow: 0 15px 50px -15px var(--tomato);
+}
+
+.submit-success {
   height: 100vh;
 
   display: flex;
   flex-direction: column;
 }
 
-main {
-  flex: 1;
-
-  overflow-y: auto;
+.submit-success p {
+  margin-bottom: 0;
 }
 
+.submit-success img {
+  margin-top: auto;
+  width: 6.4rem;
+  margin-bottom: 3rem;
+}
 
+.submit-success p span {
+  font-weight: 700;
+}
+
+.submit-success button {
+  margin-top: auto;
+}

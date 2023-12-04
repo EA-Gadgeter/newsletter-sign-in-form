@@ -11,38 +11,66 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 <body>
-  <div class="img-container">
-    <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Image that represents income for product managers">
-  </div>
-
   <main>
-    <h2>Stay updated!</h2>
+    <div class="main-img">
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Image that represents income for product managers">
+    </div>
 
+    <section class="newsletter-info">
+      <h2>Stay updated!</h2>
 
+      <p>
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
 
-    Join 60,000+ product managers receiving monthly updates on:
+      <ul>
+        <li>
+          <img src="./assets/images/icon-list.svg" alt="">
+          <p>Product discovery and building what matters</p>
+        </li>
 
-    Product discovery and building what matters
-    Measuring to ensure updates are a success
-    And much more!
+        <li>
+          <img src="./assets/images/icon-list.svg" alt="">
+          <p> Measuring to ensure updates are a success</p>
+        </li>
 
-    Email address
-    email@company.com
+        <li>
+          <img src="./assets/images/icon-list.svg" alt="">
+          <p>And much more!</p>
+        </li>
+      </ul>
 
-    Subscribe to monthly newsletter
+      <form>
+        <div class="form-with-error">
+          <label for="email">
+            <span>Email address</span>
+            <span class="hidden form-error">ERROR</span>
+          </label>
 
-    <!-- Sign-up form end -->
+          <input id="email" name="email" type="email" placeholder="email@company.com">
+        </div>
 
-    <!-- Success message start -->
-
-    Thanks for subscribing!
-
-    A confirmation email has been sent to ash@loremcompany.com.
-    Please open it and click the button inside to confirm your subscription.
-
-    Dismiss message
+        <button type="button">
+          Subscribe to monthly newsletter
+        </button>
+      </form>
+    </section>
   </main>
 
+  <section class="submit-success hidden">
+    <img src="./assets/images/icon-success.svg" alt="Big orange circle with a check inside">
 
+    <h2>Thanks for subscribing!</h2>
+
+    <p>
+      A confirmation email has been sent to
+      <span>ejemplo@gmail.com</span>. Please open it and
+      click the button inside to confirm your subscription
+    </p>
+
+    <button>
+      Dismiss message
+    </button>
+  </section>
 </body>
 </html>
